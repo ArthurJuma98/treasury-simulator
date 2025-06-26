@@ -1,15 +1,81 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>replit</title>
-  <link href="style.css" rel="stylesheet" type="text/css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Treasury Movement Simulator</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Segoe+UI&display=swap" rel="stylesheet">
 </head>
 
 <body>
-  Hello world
+  <h1>Treasury Movement Simulator</h1>
+
+  <section id="accounts">
+    <h2>Account Balances</h2>
+    <div id="account-list"></div>
+  </section>
+
+  <section id="transfer">
+    <h2>Make a Transfer</h2>
+    <form id="transfer-form">
+      <label>From:
+        <select id="from-account"></select>
+      </label>
+      <label>To:
+        <select id="to-account"></select>
+      </label>
+      <label>Amount:
+        <input type="number" id="amount" required />
+      </label>
+      <label>Note:
+        <input type="text" id="note" />
+      </label>
+      <button type="submit">Transfer</button>
+      <label>Transfer Date (optional):
+        <input type="date" id="transfer-date" />
+      </label>
+    </form>
+  </section>
+
+
+  <section id="filters">
+    <h3>Filter Logs</h3>
+    <label>Filter by Account:
+      <select id="filter-account">
+        <option value="">-- All --</option>
+      </select>
+    </label>
+
+    <label>Filter by Currency:
+      <select id="filter-currency">
+        <option value="">-- All --</option>
+        <option value="KES">KES</option>
+        <option value="USD">USD</option>
+        <option value="NGN">NGN</option>
+      </select>
+    </label>
+  </section>
+
+
+  <section id="logs">
+    <h2>Transaction Log</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>From</th>
+          <th>To</th>
+          <th>Amount</th>
+          <th>Currency</th>
+          <th>Note</th>
+          <th>Time</th>
+        </tr>
+      </thead>
+      <tbody id="log-entries"></tbody>
+    </table>
+  </section>
+
   <script src="script.js"></script>
 </body>
 
