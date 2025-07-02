@@ -1,6 +1,6 @@
 # 💸 Treasury Movement Simulator
 
-A simple web-based tool that simulates treasury workflows for moving funds between multiple virtual accounts in different currencies. Built as part of a fintech technical assessment challenge for **Niobi**.
+A simple web-based tool that simulates treasury workflows for moving funds between multiple virtual accounts in different currencies.
 
 ---
 
